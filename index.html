@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>林思源 | 全栈架构师</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, 'Segoe UI', sans-serif;
+            background: #07090f;
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+        .navbar {
+            background: rgba(7, 9, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5e7c8, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #e3b873;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .card {
+            background: rgba(12, 16, 28, 0.7);
+            border-radius: 2rem;
+            border: 1px solid rgba(227, 184, 115, 0.25);
+            padding: 2.5rem;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-badge {
+            background: rgba(227, 184, 115, 0.15);
+            border-left: 3px solid #e3b873;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            color: #e3b873;
+            margin-bottom: 1.2rem;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #d6c294);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.8rem;
+        }
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: #bfc9e0;
+            margin-bottom: 1rem;
+            border-left: 3px solid #e3b873;
+            padding-left: 1rem;
+        }
+        .hero-desc {
+            color: #9aa4bf;
+            margin-bottom: 1.8rem;
+        }
+        .btn-gold {
+            background: #e3b873;
+            color: #0a0c15;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .avatar {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #1a2438, #0b0e18);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e3b873;
+        }
+        .avatar span {
+            font-size: 5rem;
+            color: #e3b873;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(227, 184, 115, 0.2);
+            color: #8592b0;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-tagline {
+                border-left: none;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✦ LI.SIYUAN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="projects.html">项目经历</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">🏆 伦敦设计奖 · 灵感启发</div>
+                    <h1>林思源 <span style="color:#e3b873;">LEO</span></h1>
+                    <div class="hero-tagline">全栈架构师 · 体验驱动创新</div>
+                    <p class="hero-desc">3年全栈经验，重构优雅的数字化产品，让代码成为艺术的载体。善于构建高性能Web应用。</p>
+                    <div>
+                        <a href="projects.html" class="btn-gold">✨ 探索作品集</a>
+                    </div>
+                </div>
+                <div class="avatar"><span>林</span></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 林思源 · 融合伦敦设计奖美学体系</p>
+    </footer>
+</body>
+</html>
