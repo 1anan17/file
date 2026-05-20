@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我 | 林思源</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, sans-serif;
+            background: #07090f;
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+        .navbar {
+            background: rgba(7, 9, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5e7c8, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #e3b873;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .card {
+            background: rgba(12, 16, 28, 0.7);
+            border-radius: 2rem;
+            border: 1px solid rgba(227, 184, 115, 0.25);
+            padding: 2.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(120deg, #fff, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .bio-text {
+            color: #cbd5e6;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: rgba(227, 184, 115, 0.12);
+            border: 1px solid rgba(227, 184, 115, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            color: #e3b873;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(227, 184, 115, 0.2);
+            color: #8592b0;
+        }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✦ LI.SIYUAN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="projects.html">项目经历</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h2 class="section-title">⎯ 关于我 ⎯</h2>
+            <p class="bio-text">我坚信设计是对人性的深度体贴，代码则是构建未来的诗篇。3年全栈开发，主导过4个中大型项目落地。现任科技公司前端架构师，热衷于探索边界交互与设计系统。</p>
+            <h3 style="color:#e3b873; margin: 1rem 0 0.5rem;">⚡ 技术栈</h3>
+            <div class="skills">
+                <span class="skill-tag">TypeScript / React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Vue3</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Tailwind</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 林思源</p>
+    </footer>
+</body>
+</html>
