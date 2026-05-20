@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林思源 · 项目经历 | 作品集</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #07090f;
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f111a; }
+        ::-webkit-scrollbar-thumb { background: #c9a03d; border-radius: 8px; }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 9, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5e7c8, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #e3b873;
+            border-bottom: 2px solid #e3b873;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .card {
+            background: rgba(12, 16, 28, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            border: 1px solid rgba(227, 184, 115, 0.25);
+            padding: 2.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            background: linear-gradient(120deg, #ffffff, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+        .project-card {
+            background: rgba(16, 20, 32, 0.7);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(227, 184, 115, 0.2);
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #e3b873;
+        }
+        .project-icon { font-size: 2rem; color: #e3b873; margin-bottom: 0.8rem; }
+        .project-card h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+        .award-tag {
+            background: rgba(227, 184, 115, 0.2);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            color: #e3b873;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+        .tech-stack span {
+            background: rgba(255,255,255,0.05);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            color: #b9c3db;
+        }
+        .project-desc {
+            color: #a5b1ce;
+            font-size: 0.9rem;
+            margin: 0.8rem 0;
+        }
+        .project-link {
+            color: #e3b873;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(227, 184, 115, 0.2);
+            color: #8592b0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem; }
+            .nav-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✦ LI.SIYUAN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="projects.html" class="active">项目经历</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h2 class="section-title">⎯ 获奖项目 · 设计星系 ⎯</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🏆</div>
+                    <h3>EcoMart 智慧零售</h3>
+                    <div class="award-tag">最佳电商视觉 · 伦敦设计奖入围</div>
+                    <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>GSAP</span></div>
+                    <p class="project-desc">全栈电商平台，智能推荐+动态购物体验，大促期间支撑10w+流量，交互丝滑。</p>
+                    <a href="#" class="project-link">查看案例 →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>智联运维仪表盘</h3>
+                    <div class="award-tag">数据叙事金奖</div>
+                    <div class="tech-stack"><span>Vue3</span><span>ECharts</span><span>WebSocket</span><span>Pinia</span></div>
+                    <p class="project-desc">实时数据仪表盘，动态大屏渲染性能优化35%，交互预警微动效。</p>
+                    <a href="#" class="project-link">探索交互 →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🧠</div>
+                    <h3>TaskFlow 协作矩阵</h3>
+                    <div class="award-tag">2025 最佳生产力工具</div>
+                    <div class="tech-stack"><span>Next.js</span><span>Prisma</span><span>Tailwind</span></div>
+                    <p class="project-desc">看板+甘特图融合，实时评论与AI任务拆分，效率提升47%。</p>
+                    <a href="#" class="project-link">产品详情 →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🥽</div>
+                    <h3>MetaGlass 灵感画廊</h3>
+                    <div class="award-tag">实验交互 · 荣誉提名</div>
+                    <div class="tech-stack"><span>Three.js</span><span>WebGL</span><span>GSAP</span></div>
+                    <p class="project-desc">3D作品集概念站，滚动驱动动画与粒子效果，沉浸式叙事。</p>
+                    <a href="#" class="project-link">沉浸体验 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 林思源 · 以创意交互为驱动 | 融合伦敦设计奖美学体系</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林思源 · 联系我 | 合作交流</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #07090f;
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f111a; }
+        ::-webkit-scrollbar-thumb { background: #c9a03d; border-radius: 8px; }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 9, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5e7c8, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #e3b873;
+            border-bottom: 2px solid #e3b873;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .card {
+            background: rgba(12, 16, 28, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            border: 1px solid rgba(227, 184, 115, 0.25);
+            padding: 2.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            background: linear-gradient(120deg, #ffffff, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .contact-info { flex: 1; }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed rgba(227, 184, 115, 0.3);
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(227, 184, 115, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #e3b873;
+        }
+        .contact-text h4 {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .contact-text a, .contact-text p {
+            color: #bfc9e0;
+            text-decoration: none;
+        }
+        .contact-text a:hover { color: #e3b873; }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e6;
+            border: 1px solid rgba(227, 184, 115, 0.3);
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 1.1rem;
+        }
+        .social-links a:hover {
+            background: #e3b873;
+            color: #0a0c15;
+        }
+        .contact-form {
+            flex: 1;
+            background: rgba(8, 11, 20, 0.6);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(227, 184, 115, 0.2);
+        }
+        .contact-form h3 {
+            margin-bottom: 1rem;
+            color: #e3b873;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(20, 25, 40, 0.8);
+            border: 1px solid rgba(227, 184, 115, 0.3);
+            border-radius: 1rem;
+            color: white;
+            font-family: inherit;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #e3b873;
+        }
+        .btn-submit {
+            background: #e3b873;
+            width: 100%;
+            border: none;
+            padding: 0.8rem;
+            font-weight: 700;
+            border-radius: 2rem;
+            color: #0f111a;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .btn-submit:hover {
+            background: #f0ca8a;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(227, 184, 115, 0.2);
+            color: #8592b0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem; }
+            .nav-container { flex-direction: column; }
+            .contact-wrapper { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✦ LI.SIYUAN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="projects.html">项目经历</a></li>
+                <li><a href="contact.html" class="active">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h2 class="section-title">⎯ 星链 · 创意共振 ⎯</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h4>邮箱共鸣</h4>
+                            <a href="mailto:siyuan.lin@example.com">siyuan.lin@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-text">
+                            <h4>开源宇宙</h4>
+                            <a href="#">github.com/leo_siyuan</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🎨</div>
+                        <div class="contact-text">
+                            <h4>设计驱动</h4>
+                            <a href="#">dribbble.com/leo_lin</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-text">
+                            <h4>领英</h4>
+                            <a href="#">linkedin.com/in/siyuan-lin</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#">𝕏</a>
+                        <a href="#">in</a>
+                        <a href="#">📝</a>
+                        <a href="#">📷</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>✉️ 发送灵感信号</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="姓名 / 代号" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="邮箱地址" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" id="message" placeholder="合作/交流/灵感..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">发送 ✨</button>
+                    </form>
+                    <p id="formFeedback" style="margin-top: 0.8rem; font-size: 0.8rem; color: #e3b873;"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 林思源 · 以创意交互为驱动 | 融合伦敦设计奖美学体系</p>
+    </footer>
+    <script>
+        const form = document.getElementById('contactForm');
+        const feedback = document.getElementById('formFeedback');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const msg = document.getElementById('message').value.trim();
+            if (!name || !email || !msg) {
+                feedback.textContent = '⚠️ 请填写所有字段';
+                setTimeout(() => feedback.textContent = '', 2000);
+                return;
+            }
+            if (!email.includes('@')) {
+                feedback.textContent = '📡 无效的邮箱地址';
+                setTimeout(()

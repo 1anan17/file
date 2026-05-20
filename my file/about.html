@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林思源 · 关于我 | 全栈架构师</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #07090f;
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f111a; }
+        ::-webkit-scrollbar-thumb { background: #c9a03d; border-radius: 8px; }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 9, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            padding: 1rem 2rem;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5e7c8, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #cbd5e6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            padding: 0.4rem 0;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #e3b873;
+            border-bottom: 2px solid #e3b873;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .card {
+            background: rgba(12, 16, 28, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            border: 1px solid rgba(227, 184, 115, 0.25);
+            padding: 2.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            background: linear-gradient(120deg, #ffffff, #e3b873);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .bio-text {
+            font-size: 1.05rem;
+            color: #cbd5e6;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: rgba(227, 184, 115, 0.12);
+            border: 1px solid rgba(227, 184, 115, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #e3b873;
+        }
+        .info-block {
+            margin-top: 1.5rem;
+        }
+        .info-block h3 {
+            color: #e3b873;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(227, 184, 115, 0.2);
+            color: #8592b0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem; }
+            .nav-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">✦ LI.SIYUAN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html" class="active">关于我</a></li>
+                <li><a href="projects.html">项目经历</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h2 class="section-title">⎯ 关于共振场 ⎯</h2>
+            <p class="bio-text">我坚信设计是对人性的深度体贴，代码则是构建未来底层的诗篇。3年全栈开发，主导过4个中大型项目落地。现任某科技公司前端架构师，热衷于探索边界交互、响应式架构与设计系统。善于将复杂需求转化为直观优雅的界面，并获得团队优秀创新奖。</p>
+            
+            <div class="info-block">
+                <h3>⚡ 技术星云</h3>
+                <div class="skills">
+                    <span class="skill-tag">TypeScript / React</span>
+                    <span class="skill-tag">Next.js 14</span>
+                    <span class="skill-tag">Vue3 / Nuxt</span>
+                    <span class="skill-tag">Node.js (Nest)</span>
+                    <span class="skill-tag">Tailwind / Framer</span>
+                    <span class="skill-tag">Three.js 基础</span>
+                    <span class="skill-tag">Prisma + PostgreSQL</span>
+                    <span class="skill-tag">Git Actions / Vercel</span>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>🏆 获奖与认可</h3>
+                <div class="skills">
+                    <span class="skill-tag">✨ Awwwards 灵感提名</span>
+                    <span class="skill-tag">🏅 伦敦设计奖 UI 类入围</span>
+                    <span class="skill-tag">⚡ 年度创新工程奖</span>
+                    <span class="skill-tag">🎯 最佳团队协作奖</span>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>📚 教育背景</h3>
+                <p style="color:#bfc9e0;">计算机科学与技术 硕士 · 浙江大学 | 2018 - 2022</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 林思源 · 以创意交互为驱动 | 融合伦敦设计奖美学体系</p>
+    </footer>
+</body>
+</html>
